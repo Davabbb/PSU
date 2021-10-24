@@ -89,10 +89,8 @@ int from_infix_to_num(std::string &infix) {
 int main() {
     std::string infix, postfix;
     std::cin >> infix;
-    //infix = "200-(123+34*2)+(48-2)";
-
     std::cout << from_infix_to_num(infix);
-    //num = from_postfix_to_num(postfix);
-
     return 0;
 }
+
+//https://contest.yandex.ru/contest/29755/run-report/54097174/
