@@ -1,3 +1,5 @@
+//https://contest.yandex.ru/contest/29755/run-report/53666761/
+
 #include <iostream>
 #include <cmath>
 #include <algorithm>
@@ -43,4 +45,3 @@ int main() {
     return 0;
 }
 
-//https://contest.yandex.ru/contest/29755/run-report/53666761/
