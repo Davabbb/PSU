@@ -42,3 +42,5 @@ int main() {
 
     return 0;
 }
+
+//https://contest.yandex.ru/contest/29755/run-report/53666761/
