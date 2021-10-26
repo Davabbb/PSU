@@ -1,4 +1,4 @@
-//https://contest.yandex.ru/contest/29755/run-report/53666249/
+//https://contest.yandex.ru/contest/29755/run-report/55433917/
 
 #include <iostream>
 
@@ -21,17 +21,26 @@ int main() {
     }
 
     std::cin >> find;
-    int k = 0;
-    for (int i = 0; i < n; i++) {
-        for (int j = 1; j + k - 1 < m; j++) {
-            if (data1[i] + data2[m - k - j] == find) {
-                count += 1;
-                k += j;
-                break;
-            }
+
+    int count1 = 0, count2 = m - 1;
+    int old_count2 = count2;
+    for (int i = 0; i < n + m; i++) {
+        if (data1[count1] + data2[count2] == find) {
+            count += 1;
+            count1 += 1;
+            count2 -= 1;
+            old_count2 = count2;
+            continue;
+        } else if (data1[count1] + data2[count2] < find) {
+            count1 += 1;
+            count2 = old_count2;
+        } else if (data1[count1] + data2[count2] > find) {
+            count2 -= 1;
+        } if ((count1 == n) || (count2 == -1)) {
+            break;
         }
     }
+
     std::cout << count;
     return 0;
 }
-
